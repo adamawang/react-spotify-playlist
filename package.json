@@ -1,0 +1,17 @@
+{
+  "name": "reactspotify",
+  "version": "1.0.0",
+  "description": "Spotify playlist picker in React",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack -d --watch --progress --colors",
+    "build": "webpack -p",
+    "start" : "node ./server/server.js"
+  },
+  "keywords": [
+    "Spotify",
+    "React"
+  ],
+  "author": "Adam Wang <adamw3494@gmail.com>",
+  "license": "MIT"
+}
