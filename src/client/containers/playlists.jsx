@@ -7,7 +7,6 @@ export default class Playlists extends Component {
   render() {
     return (
       <div>
-        <p>hi</p>
         <User />
         <Playlist />
         <Song />

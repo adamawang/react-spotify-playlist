@@ -5,9 +5,27 @@ import { bindActionCreators } from 'redux';
 import { userInfo } from '../actions';
 
 class User extends Component {
+  componentDidMount() {
+    this.props.userInfo();
+  }
+
+  componentDidUpdate() {
+    // console.log('updated: ', this.props)
+  }
+
   render() {
+    if (!this.props.info.data) {
+      return (
+        <div>Loading...</div>
+      )
+    }
+    const user = this.props.info.data;
     return (
-      <div>Hello person</div>
+      <div>
+        <div>Hello, {user.display_name}</div>
+        <img src={user.images[0].url} />
+      </div>
+
     )
   }
 }

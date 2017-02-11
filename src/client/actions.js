@@ -11,7 +11,7 @@ export function getPlaylist() {
   };
   const request = axios.get('/api/playlist', config)
   .then((response) => {
-    console.log('got playlist response: ', resp);
+    console.log('got playlist response: ', response);
     return response;
   });
   return {
@@ -26,7 +26,7 @@ export function getSong() {
   };
   const songRequest = axios.get('/api/savedtracks', config)
   .then((response) => {
-    console.log('got songs response: ', resp);
+    console.log('got songs response: ', response);
     return response;
   });
   return {
@@ -39,11 +39,7 @@ export function userInfo() {
   const config = {
     headers: { authorization: `Bearer ${localStorage.getItem('token')}`},
   };
-  const userInfoReq = axios.get('/api/userinfo', config)
-  .then((resp) => {
-    console.log('user info response: ', resp);
-    return resp;
-  })
+  const userInfoReq = axios.get('/api/userinfo', config);
   return {
     type: 'GET_USERINFO',
     payload: userInfoReq,

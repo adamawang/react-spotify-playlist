@@ -5,6 +5,14 @@ import { bindActionCreators } from 'redux';
 import { getPlaylist } from '../actions';
 
 class Playlist extends Component {
+  componentDidMount() {
+    this.props.getPlaylist();
+  }
+
+  componentDidUpdate() {
+    console.log('Playlist data updated: ', this.props);
+  }
+
   render() {
     return (
       <div>This is the playlist component</div>
