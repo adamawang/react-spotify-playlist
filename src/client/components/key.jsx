@@ -3,10 +3,15 @@ import { hashHistory } from 'react-router';
 
 class Key extends Component {
   componentDidMount() {
-    const token = window.location.hash;
-    console.log('token?: ', token);
+    const token = window.location.hash.slice(6);
     localStorage.setItem('token', token);
-    hashHistory.push('/playlist');
+    hashHistory.push('/playlists');
+  }
+
+  render() {
+    return (
+      <div></div>
+    )
   }
 }
 
