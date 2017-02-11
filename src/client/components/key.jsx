@@ -10,4 +10,4 @@ class Key extends Component {
   }
 }
 
-export default Token;
+export default Key;

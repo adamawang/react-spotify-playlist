@@ -5,24 +5,23 @@ const BUILD_DIR = path.resolve(__dirname, 'src/public');
 const APP_DIR = path.resolve(__dirname, 'src/');
 
 const config = {
-  devTool: 'eval',
-  entry: `${APP_DIR}/src/index.jsx`,
+  entry: `${APP_DIR}/client/index.jsx`,
   output: {
     path: BUILD_DIR,
     filename: 'bundle.js',
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.jsx?/,
         include: APP_DIR,
         exclude: /node_modules/,
-        loader: 'babel',
+        loader: 'babel-loader',
       },
     ],
   },
   resolve: {
-    extensions: ['', '.js', '.jsx'],
+    extensions: ['.js', '.jsx'],
   },
 };
 

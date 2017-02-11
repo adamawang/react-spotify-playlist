@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { hashHistory } from 'react-router';
 import Playlist from './playlist';
 import Song from './song';
 
-class Index extends component {
+class Index extends Component {
   render() {
     return (
       <div>

@@ -4,8 +4,8 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { Router, hashHistory } from 'react-router';
 import promise from 'redux-promise';
-import routes from './router';
-import reducer from './reducer';
+import routes from './routes';
+import reducer from './reducers/reducer';
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
