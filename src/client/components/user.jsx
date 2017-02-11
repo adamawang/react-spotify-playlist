@@ -2,24 +2,24 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { hashHistory } from 'react-router';
 import { bindActionCreators } from 'redux';
-import { getSong } from '../actions';
+import { userInfo } from '../actions';
 
-class Song extends Component {
+class User extends Component {
   render() {
     return (
-      <div>This is the song component</div>
+      <div>Hello person</div>
     )
   }
 }
 
 function mapStateToProps(state) {
   return {
-    songs: state.song,
+    info: state.user,
   }
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ getSong }, dispatch);
+  return bindActionCreators({ userInfo }, dispatch);
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Song);
+export default connect(mapStateToProps, mapDispatchToProps)(User);
