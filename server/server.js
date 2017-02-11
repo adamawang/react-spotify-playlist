@@ -21,7 +21,7 @@ app.use(express.static(path.join(__dirname, '../node_modules')));
 
 
 // load passport strategies
-const spotifyStrategy = require('./passport.js');
+const spotifyStrategy = require('./passport-spotify.js');
 
 passport.use('spotify', spotifyStrategy);
 
