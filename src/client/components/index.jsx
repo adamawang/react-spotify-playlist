@@ -7,9 +7,11 @@ class Index extends component {
   render() {
     return (
       <div>
-        <Playlist />
-        <Song />
+        <h1>Please log into your Spotify account</h1>
+        <a href='/auth/spotify'><button>Spotify Auth</button></a>
       </div>
     )
   }
 }
+
+export default Index;
