@@ -14,6 +14,12 @@ class Playlist extends Component {
   }
 
   render() {
+    if (!this.props.playlist.data) {
+      return (
+        <div>Loading playlist data...</div>
+      )
+    }
+    const playlists = this.props.playlist.data;
     return (
       <div>This is the playlist component</div>
     )
