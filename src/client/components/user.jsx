@@ -16,7 +16,7 @@ class User extends Component {
   render() {
     if (!this.props.info.data) {
       return (
-        <div>Loading...</div>
+        <div>Loading User data...</div>
       )
     }
     const user = this.props.info.data;
