@@ -20,7 +20,7 @@ class Song extends Component {
     }
     const songs = this.props.songs.data
     return (
-      <div>This is the song component</div>
+      <div>This is the song component, add a button for song</div>
     )
   }
 }

@@ -21,7 +21,7 @@ class Playlist extends Component {
     }
     const playlists = this.props.playlist.data;
     return (
-      <div>This is the playlist component</div>
+      <div>This is the playlist component, add a button for playlist</div>
     )
   }
 }
