@@ -47,8 +47,6 @@ app.get('/auth/spotify/callback', (req, res, next) => {
     if (err) {
       console.log('Error with spotify login');
     } else {
-      // TODO don't save token and profile details here, create API call to retrieve user data from spotify
-      // Save user info in the front
       res.redirect(`/#/key/${token}`);
     }
   })(req, res, next);
