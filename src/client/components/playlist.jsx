@@ -26,7 +26,7 @@ class Playlist extends Component {
       <div className='playlist'>
         <div>{playlist.name}</div>
         <img src={playlist.images[0].url} />
-        <a href={playlist.external_urls.spotify}><button>Open in Spotify</button></a>
+        <a href={playlist.external_urls.spotify}><button>Open in HEY</button></a>
       </div>
     )
   }

@@ -5,10 +5,15 @@ const BUILD_DIR = path.resolve(__dirname, 'src/public');
 const APP_DIR = path.resolve(__dirname, 'src/');
 
 const config = {
-  entry: `${APP_DIR}/client/index.jsx`,
+  entry: [
+    'webpack-dev-server/client?http://localhost:5000',
+    'webpack/hot/only-dev-server',
+    path.join(__dirname, '/src/client/index.jsx'),
+  ],
   output: {
     path: BUILD_DIR,
     filename: 'bundle.js',
+    publicPath: '/src/',
   },
   module: {
     rules: [
@@ -16,7 +21,7 @@ const config = {
         test: /\.jsx?/,
         include: APP_DIR,
         exclude: /node_modules/,
-        loader: 'babel-loader',
+        loaders: ['react-hot-loader', 'babel-loader'],
       },
     ],
   },
@@ -24,9 +29,7 @@ const config = {
     extensions: ['.js', '.jsx'],
   },
   plugins: [
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production'),
-    }),
+    new webpack.HotModuleReplacementPlugin(),
   ],
 };
 

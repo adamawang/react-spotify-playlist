@@ -1,12 +1,21 @@
 require('dotenv').config();
 const path = require('path');
+const webpack = require('webpack');
 const express = require('express');
 const bodyParser = require('body-parser');
 const passport = require('passport');
 const request = require('request');
 const logger = require('morgan');
+const config = require('../webpack.config');
 
 const app = express();
+var compiler = webpack(config);
+
+app.use(require('webpack-dev-middleware')(compiler, {
+  publicPath: config.output.publicPath
+}));
+
+app.use(require('webpack-hot-middleware')(compiler));
 
 app.use(logger('dev'));
 app.use(bodyParser.urlencoded({
