@@ -7,8 +7,8 @@ export default function Playlists() {
   return (
     <div>
       <User />
-      <Playlist />
-      <Song />
+      <Playlist className='playlist'/>
+      <Song className='song'/>
     </div>
   )
 }

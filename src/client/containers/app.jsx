@@ -4,7 +4,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <h1>Spotify Playlist  v20</h1>
+        <h1>Spotify Playlist Picker v2.01</h1>
         {this.props.children}
       </div>
     )

@@ -19,10 +19,13 @@ class Song extends Component {
         <div>Loading Song data...</div>
       )
     }
-    const songs = this.props.songs.data
+    const songs = this.props.songs.data.items;
+    const randomSong = Math.floor(Math.random() * songs.length) + 1;
+    const song = songs[randomSong];
     return (
       <div>
-        <div></div>
+        <div>{song.track.name}</div>
+        <img src={song.track.album.images[0].url} />
       </div>
     )
   }
