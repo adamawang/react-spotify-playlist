@@ -10,8 +10,9 @@ class Song extends Component {
   }
 
   componentDidUpdate() {
-    console.log('Songs state updated: ', this.props.songs)
+    // console.log('Songs state updated: ', this.props.songs)
   }
+
   render() {
     if (!this.props.songs.data) {
       return (
@@ -20,7 +21,9 @@ class Song extends Component {
     }
     const songs = this.props.songs.data
     return (
-      <div>This is the song component, add a button for song</div>
+      <div>
+        <div></div>
+      </div>
     )
   }
 }
